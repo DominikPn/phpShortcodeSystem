@@ -1,0 +1,16 @@
+{
+    "name": "desktophome/shortcode-system",
+    "description": "Shortcode system for php",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dominik Pondo",
+            "email": "dominikpondo@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"ShortcodeSystem\\": "src/"}
+    }
+
+}
