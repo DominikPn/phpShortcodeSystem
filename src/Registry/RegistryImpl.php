@@ -9,6 +9,7 @@
 namespace ShortcodeSystem\Registry;
 
 
+use ShortcodeSystem\Observer\NullObserver;
 use ShortcodeSystem\Observer\Observer;
 
 class RegistryImpl implements Registry
@@ -23,6 +24,7 @@ class RegistryImpl implements Registry
     public function findObserverByShortcodeID(string $ID): Observer
     {
         if( isset($this->observers[$ID]) ) return $this->observers[$ID];
+        return new NullObserver();
     }
 
 }
