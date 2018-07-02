@@ -29,15 +29,9 @@ interface Registry
      * Return observer for concrete shortcode ID
      *
      * @param string $ID
-     * @return array
+     * @return Observer
      */
-    public function findObserverByShortcodeID(string $ID): array;
+    public function findObserverByShortcodeID(string $ID): Observer;
 
-    /**
-     * Call handle method on assigned observers and return data to insert into text
-     *
-     * @param Shortcode $shortcode
-     * @return string
-     */
-    public function notifyObservers(Shortcode $shortcode): string;
+
 }

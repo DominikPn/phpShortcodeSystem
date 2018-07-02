@@ -14,6 +14,19 @@ interface Parser
     public function setRegexConfig(RegexConfig $regexConfig);
 
     /**
+     * Call $closure when find shortcode
+     *
+     * $closure function should return string;
+     *
+     * @param string $text
+     * @param \Closure $closure
+     * @return string
+     */
+    public function advencedParser(string $text,\Closure $closure): string;
+
+    /**
+     * Parse text
+     *
      * @param string $text
      * @return string
      */
