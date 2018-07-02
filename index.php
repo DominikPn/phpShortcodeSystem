@@ -1,12 +1,11 @@
 
 
-
-$test= 'adad[asdasd]asdasdasdasd';
-
-$parser = new Parser();
-
 $registry = new Registry();
 
-$parser->parse($test, function ($parser, $shortcode) use $registry{
-    return $registry->notifyObservers($shortcode);
-});
+$registry->register(new Observer());
+
+$director = new Director($registry);
+$text = $director->run(new ArrayShortCode());
+
+$parser = new Parser($director);
+$parser->parse($text);
