@@ -9,7 +9,7 @@
 namespace ShortcodeSystem\Shortcode;
 
 
-interface ShortcodeFactory
+interface Factory
 {
     /**
      * Build shortCode
