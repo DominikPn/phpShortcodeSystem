@@ -14,19 +14,14 @@ use ShortcodeSystem\Shortcode\Shortcode;
 interface Observer
 {
     /**
-     * Return assigned shortcode ID
-     *
-     * @return string
-     */
-    public function ID():string;
-
-    /**
      * This method is called when parser find shortcode
      *
-     * Example
+     * Returned text will be inserted instead shortcode TEXT
+     * Example:
+     * [span name="exampleName"] test [/span]  ---->>>> <span> test exampleName</span>
      *
      * @param Shortcode $shortcode
      * @return string
      */
-    public function update(Shortcode $shortcode): string;
+    public function handle(Shortcode $shortcode): string;
 }

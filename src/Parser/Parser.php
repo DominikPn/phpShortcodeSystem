@@ -11,5 +11,12 @@ namespace ShortcodeSystem\Parser;
 
 interface Parser
 {
-    public function parse(string $text);
+    public function setRegexConfig(RegexConfig $regexConfig);
+
+    /**
+     * @param string $text
+     * @return string
+     */
+    public function parse(string $text) : string;
+
 }

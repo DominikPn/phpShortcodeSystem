@@ -9,7 +9,10 @@
 namespace ShortcodeSystem\Parser;
 
 
-class RegexConfig
+interface RegexConfig
 {
-
+    public function openCharacter():string;
+    public function closeCharacter():string;
+    public function assignCharacter():string;
+    public function endCharacter():string;
 }
